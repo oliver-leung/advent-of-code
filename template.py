@@ -1,7 +1,4 @@
-from typing import List
-
-
-def parse(filename: str) -> List:
+def parse(filename: str):
     with open(filename) as f:
         data = [line.strip() for line in f.readlines()]
 
