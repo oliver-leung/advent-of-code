@@ -1,8 +1,8 @@
-import os
+from os.path import join, dirname
 
 
 def parse(filename: str) -> list:
-    with open(os.path.join(os.path.dirname(__file__), filename)) as f:
+    with open(join(dirname(__file__), filename)) as f:
         lines = [line.strip().split() for line in f.readlines()]
         data = [(a, int(b)) for a, b in lines]
         return data
