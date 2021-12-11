@@ -1,5 +1,6 @@
 from os.path import join, dirname
 from typing import List
+import sys
 
 
 def parse(filename: str) -> List:
@@ -9,4 +10,5 @@ def parse(filename: str) -> List:
     return data
 
 if __name__ == '__main__':
-    pass
+    input = sys.argv[1]
+    data = parse(input)
